@@ -1,0 +1,33 @@
+version: '3'
+
+services:
+  product-services:
+    build: ./api
+    volumes:
+      - ./api:/usr/src/app
+    ports:
+      - 5050:80
+    networks:
+      static-network:
+        ipv4_address: 172.20.50.2
+  mariadb:
+    build: ./db
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=abc123
+    networks:
+      static-network:
+        ipv4_address: 172.20.150.2
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+    networks:
+      static-network:
+        ipv4_address: 172.20.100.2
+networks:
+  static-network:
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16

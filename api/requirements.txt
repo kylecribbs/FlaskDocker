@@ -1,0 +1,8 @@
+Flask>=0.12.2
+flask-restplus>=0.10.1
+SQLAlchemy>=0.8.0
+marshmallow>=2.8.0
+marshmallow-jsonapi>=0.16.0
+psycopg2>=2.7.3.2
+Flask-Migrate>=2.1.1
+Flask-Script>=2.0.6
