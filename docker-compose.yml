@@ -15,9 +15,6 @@ services:
     restart: always
     environment:
       - MYSQL_ROOT_PASSWORD=abc123
-      - MYSQL_USER=dbo625024825
-      - MYSQL_PASSWORD=Qi>^#$u3xEqR<dtIf~mU
-      - MYSQL_DATABASE=db625024825
     networks:
       static-network:
         ipv4_address: 172.20.150.2

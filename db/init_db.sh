@@ -1,5 +1,6 @@
 #!/bin/bash
 /usr/bin/mysqld_safe --skip-grant-tables &
 sleep 5
-mysql_upgrade -u dbo625024825 -pQi>^#$u3xEqR<dtIf~mU
-mysql -u dbo625024825 -pQi>^#$u3xEqR<dtIf~mU db625024825 < /tmp/dump.sql
+mysql_upgrade -u root -pabc123
+mysql -uroot -pabc123 -e "CREATE DATABASE db625024825"
+mysql -uroot -pabc123 db625024825 < /tmp/dump.sql
